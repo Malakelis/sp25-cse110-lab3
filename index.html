@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Meeting note for the project meeting.">
+    <meta name="description" content="Meeting note for the Pomodoro Timer project meeting.">
     <link rel="icon" href="images/favicon.png" type="image/png"> <!-- My favicon isn't working on safari -->
     <title> Meeting Notes: Pomodoro Timer Project </title>
   </head>
@@ -25,13 +25,34 @@
           <h2>Meeting Overview</h2>
             <hr>
               <h3>Highlights</h3>
-              <p>This meeting focused on the Pomodoro Timer project, covering initial project goals, key feature discussions, and some immediate action items.</p>
+              <p>This meeting focused on the Pomodoro Timer project, covering initial project goals, key feature discussions, and some <strong>immediate</strong> action items.</p>
               <h3>Challenges</h3>
-              <p>Some challenges discussed include the integration with task management tools and ensuring a responsive design.</p>
+              <p>Some challenges discussed include the integration with <b>task management tools</b> and ensuring a <em>responsive</em> design.</p>
               <h3>Next Steps</h3>
-              <p>Action items have been assigned to each team member for immediate <span class="emphasis">follow-up.</span></p>
+              <p>
+                Action items have been assigned to each team member for immediate <span class="emphasis">follow-up.</span>
+                <br>
+                If you want to learn more about the <i>Pomodoro Technique</i>, you can visit <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique"> Pomodoro Technique </a>.
+                <img src="images/vibe.png" alt="Vibe Coding" width="300">
+              </p>
               <hr>
           </div>
+      </section>
+      <section>
+        <h2>Meeting Media</h2>
+        <p>Listen to a brief audio snippet and watch a short video from our meeting.</p>
+      
+        <h3>Meeting Audio</h3>
+        <audio controls>
+          <source src="media/meeting-audio.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      
+        <h3>Meeting Video</h3>
+        <video width="320" height="240" controls>
+          <source src="media/meeting-video.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
       </section>
       <section>
           <h2>Attendees</h2>
@@ -66,6 +87,75 @@
             <li>Jeff: Make us more money</li>
             </ul>
         </section>
+        <section>
+          <h2> Additional Information</h2>
+          <details>
+            <summary> Read More About the Project</summary>
+            <p>Our Pomodoro Timer will feature adjustable intervals, a motivational message system, and optional integrations with popular productivity tools like Slack.</p>
+          </details>
+        </section>
+
+        <!-- Form at the bottom -->
+        <section>
+          <h2>Simple Feedback Form</h2>
+        <form>
+          <fieldset>
+            <legend>Share Your Thoughts</legend>
+            
+            <label for="username">Name (text input):</label>
+            <input type="text" id="username" name="username">
+
+            <br><br>
+
+            <label for="birthday">Birthday (date input):</label>
+            <input type="date" id="birthday" name="birthday">
+
+            <br><br>
+
+            <label>Preferred Communication (radio):</label>
+            <input type="radio" id="radioEmail" name="communication" value="email">
+            <label for="radioEmail">Email</label>
+            <input type="radio" id="radioPhone" name="communication" value="phone">
+            <label for="radioPhone">Phone</label>
+
+            <br><br>
+
+            <label>Interests (checkboxes):</label>
+            <input type="checkbox" id="coding" name="interest" value="coding">
+            <label for="coding">Coding</label>
+            <input type="checkbox" id="music" name="interest" value="music">
+            <label for="music">Music</label>
+
+            <br><br>
+
+            <label for="comments">Comments (textarea):</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+            <br><br>
+
+            <label for="phase">Choose a Project Phase (select):</label>
+            <select id="phase" name="phase">
+              <option value="planning">Planning</option>
+              <option value="development">Development</option>
+              <option value="testing">Testing</option>
+            </select>
+
+            <br><br>
+
+            <label for="phaseDatalist">Project Phase (datalist):</label>
+            <input list="phaseOptions" id="phaseDatalist" name="phaseDatalist">
+            <datalist id="phaseOptions">
+              <option value="Planning">
+              <option value="Development">
+              <option value="Testing">
+            </datalist>
+
+            <br><br>
+
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </section>
     </main>
     <footer>
       <p>&copy; 2025 Anthony Georgis. All rights reserved.</p>
