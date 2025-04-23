@@ -21,8 +21,17 @@ main > section:last-of-type {
 /* Heading font family */
 h1, h2, h3 {
   font-family: "Times New Roman";
-  color: rgb(42, 57, 57);
 }
+h1 {
+  color:rgb(42, 57, 57);
+}
+h2 {
+  color: color(display-p3 0.3 0.6 0.2);
+}
+h3 {
+  color: color-mix(in display-p3, gold 50%, darkslateblue 50%);
+}
+
 /* Margin shorthand on the header */
 header {
   margin: 1rem 2rem 0.5rem 2rem;
@@ -207,6 +216,7 @@ section:has(fieldset) {
   padding: 1rem;
 }
 
+/* nested selectors */
 .header-container > img {
   border: 2px solid rgb(42, 57, 57);
   border-radius: 4px;
