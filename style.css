@@ -35,10 +35,10 @@ h1 {
   color:rgb(42, 57, 57);
 }
 h2 {
-  color: color(display-p3 0.3 0.6 0.2);
+  color: color(srgb 0.3 0.6 0.2);
 }
 h3 {
-  color: color-mix(in display-p3, gold 50%, darkslateblue 50%);
+  color: color-mix(in srgb, gold 50%, darkslateblue 50%);
 }
 
 /* Margin shorthand on the header */
