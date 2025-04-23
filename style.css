@@ -13,6 +13,7 @@ main {
 /* Span the form section across both columns */
 main > section:last-of-type {
   grid-column: 1 / -1;
+}
 
 /* Heading font family */
 h1, h2, h3 {
@@ -27,7 +28,7 @@ header {
 
 /* Padding shorthand on header‐container div */
 .header-container {
-  padding: 1rem 1.5rem;  /* vertical 1rem, horizontal 1.5rem */
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
 }
 
 /* Feedback button styling */
@@ -117,4 +118,20 @@ nav ul li {
   min-width: 100px;
   display: block;
   margin: 0 auto;
+}
+
+/* RESPONSIVENESS: switch to single‐column on small screens */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;   /* only one column instead of two */
+  }
+
+  nav ul {
+    flex-direction: column;       /* stack nav links vertically */
+    gap: 0.5rem;                  /* tighten up the spacing */
+  }
+
+  header {
+    margin: 1rem;                 /* use uniform margin on small screens */
+  }
 }
