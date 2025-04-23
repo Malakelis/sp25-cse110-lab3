@@ -3,9 +3,31 @@ body {
     background-color: lightblue;
   }
 
+main {
+  display: grid;                                  /* instantiate grid */
+  grid-template-columns: repeat(2, 1fr);           /* two equal-width columns */
+  gap: 1.5rem;                                     /* space between rows & columns */
+  grid-auto-rows: minmax(20px, auto);             /* ensure a minimum height */
+}
+
+/* Span the form section across both columns */
+main > section:last-of-type {
+  grid-column: 1 / -1;
+
 /* Heading font family */
 h1, h2, h3 {
   font-family: "Times New Roman";
+  color: rgb(42, 57, 57);
+}
+/* Margin shorthand on the header */
+header {
+  margin: 1rem 2rem 0.5rem 2rem;
+  position: sticky;
+}
+
+/* Padding shorthand on header‐container div */
+.header-container {
+  padding: 1rem 1.5rem;  /* vertical 1rem, horizontal 1.5rem */
 }
 
 /* Feedback button styling */
@@ -13,11 +35,21 @@ button[type="submit"] {
   background-color: #007BFF;
   color: #FFFFFF;
   padding: 10px 20px;
-  border: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(0, 86, 179);
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+
+  margin: 12pt 0;
+  padding: 0.6cm 1cm;
+  border-width: 2px;
+
+  width: 6%;
+  font-size: 1rem;
+  line-height: 1.2em;
 }
 
 button[type="submit"]:hover {
@@ -25,5 +57,64 @@ button[type="submit"]:hover {
 }
 /* Section padding */
 section {
-  padding: 5px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+/* Hex code example: white background on the feedback form */
+fieldset {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #FFF;
+  border-radius: 4px;
+  margin: 2rem auto;
+}
+
+legend{
+  background-color: #FFFFFF;
+  padding: -3rem 0.5rem;
+  position: relative;
+  top: 9px;
+}
+
+details summary {
+  display: block;
+  text-align: left;
+  text-decoration: underline;
+  color: hsl(219, 100%, 50%);
+}
+
+/* Flexbox layout for the navigation menu */
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;  /* pack them at the start instead of stretching */
+  align-items: center;
+  gap: 2rem;                     /* uniform space between each link */
+  padding: 0;                   /* remove default ul padding */
+  margin: 0;                    /* remove default ul margin */
+}
+
+/* Active state for navigation links */
+nav ul li a:active {
+  color: red;
+}
+
+nav ul li {
+  display: inline;       /* makes the list items flow horizontally */
+  margin-right: 1rem;    /* little spacing between links */
+}
+
+/* Sizing example: height, width, max-width, and min-width */
+.header-container img {
+  height: 200px;
+  width: 100%;
+  max-width: 300px;
+  min-width: 100px;
+  display: block;
+  margin: 0 auto;
 }
