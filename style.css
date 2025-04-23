@@ -18,6 +18,15 @@ main > section:last-of-type {
   grid-column: 1 / -1;
 }
 
+/* CSS variable with fallback for the body background */
+:root {
+  --body-bg: lightblue;
+}
+
+body {
+  background-color: var(--body-bg, lightblue);
+}
+
 /* Heading font family */
 h1, h2, h3 {
   font-family: "Times New Roman";
